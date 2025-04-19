@@ -1,0 +1,105 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "Frontend Developer",
+      "body": " frontend developer with 5 years of experience must be selected for this position, the job description is as follows: ",
+      "tags": [
+        "frontend",
+        "developer",
+        "react"
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Backend Developer",
+      "body": "Backend developer with 5 years of experience must be selected for this position, the job description is as follows: 1. strong, 2.Chersfull  ",
+      "tags": [
+        "backend",
+        "developer",
+        "nodejs"
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Fullstack Developer",
+      "body": "Fullstack developer with 5 years of experience must be selected for this position, the job description is as follows: 1. strong, 2.Chersfull  ",
+      "tags": [
+        "fullstack",
+        "developer",
+        "react",
+        "nodejs"
+      ]
+    },
+    {
+      "id": "4",
+      "title": "UI/UX Designer",
+      "body": "UI/UX designer with 5 years of experience must be selected for this position, the job description is as follows: 1. strong, 2.Chersfull  ",
+      "tags": [
+        "ui/ux",
+        "designer",
+        "figma"
+      ]
+    },
+    {
+      "id": "e0e9",
+      "title": "artkel web spider",
+      "body": "",
+      "tags": []
+    },
+    {
+      "id": "2d16",
+      "title": "artkel web spider",
+      "body": "ini adalah was",
+      "tags": []
+    },
+    {
+      "id": "395e",
+      "title": "artikel wew",
+      "body": "mewewew",
+      "tags": []
+    },
+    {
+      "id": "3263",
+      "title": "artikel bodong",
+      "body": "dang dig dong",
+      "tags": "laravel"
+    },
+    {
+      "id": "31af",
+      "title": "artikel walid",
+      "body": "walid cocona",
+      "tags": ""
+    },
+    {
+      "id": "858e",
+      "title": "bukune",
+      "body": "horororor",
+      "tags": "Flutter"
+    },
+    {
+      "id": "409f",
+      "title": "artikel tentang AI",
+      "body": "ini adalah tang ngit ngut",
+      "tags": "PHP"
+    },
+    {
+      "id": "0845",
+      "title": "artikel tentang AI",
+      "body": "ini adalah tang ngit ngut",
+      "tags": "PHP"
+    },
+    {
+      "id": "e97d",
+      "title": "asdsa",
+      "body": "asdasd",
+      "tags": "asdasd"
+    },
+    {
+      "id": "fc5c",
+      "title": "",
+      "body": "",
+      "tags": []
+    }
+  ]
+}
