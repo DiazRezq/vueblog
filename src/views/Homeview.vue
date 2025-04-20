@@ -1,18 +1,44 @@
 <template>
-  <div class="home">
-    <h1>Home</h1>
-    <div v-if="error">{{ error }}</div>
-    <div v-if="posts.length">
-      <PostsList :posts="posts" />
+  <!-- Page Header  -->
+  <header
+    class="masthead"
+    style="
+      background-image:../components/posts/PostsList.vuesh.com/photo-1470092306007-055b6797ca72?ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80');
+    "
+  >
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>Heydar's Blog</h1>
+            <span class="subheading"
+              >A collection of Heydar's random musings.</span
+            >
+          </div>
+        </div>
+      </div>
     </div>
-    <div v-else>
-      <Loading />
+  </header>
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div v-if="error">{{ error }}</div>
+        <div v-if="posts.length">
+          <PostsList :posts="posts" />
+        </div>
+        <div v-else>
+          <Loading />
+        </div>
+        <hr />
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import PostsList from "../components/PostsList.vue";
+import PostsList from "../components/posts/PostsList.vue";
 import getPosts from "@/composable/getPosts";
 import Loading from "@/components/Loading.vue";
 export default {
@@ -23,6 +49,9 @@ export default {
     load();
 
     return { posts, error };
+  },
+  mounted() {
+    console.log($(".para").text());
   },
 };
 </script>
