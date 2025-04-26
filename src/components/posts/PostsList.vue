@@ -3,12 +3,12 @@
     <div class="post-preview">
       <Postsingle :post="post" />
     </div>
+    <hr />
   </div>
-  <hr />
 </template>
 
 <script>
-import Postsingle from "./Postsingle.vue";
+import Postsingle from "@/components/posts/Postsingle.vue";
 export default {
   props: ["posts"],
   components: { Postsingle },

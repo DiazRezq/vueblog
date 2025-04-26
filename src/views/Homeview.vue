@@ -1,17 +1,12 @@
 <template>
   <!-- Page Header  -->
-  <header
-    class="masthead"
-    style="
-      background-image:../components/posts/PostsList.vuesh.com/photo-1470092306007-055b6797ca72?ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80');
-    "
-  >
+  <header class="masthead" style="background-image: url('/img/home-bg.jpg')">
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="col-lg-6 col-md-8 mx-auto">
           <div class="site-heading">
-            <h1>Heydar's Blog</h1>
+            <h1>Clean Blog</h1>
             <span class="subheading"
               >A collection of Heydar's random musings.</span
             >

@@ -1,25 +1,77 @@
 <template>
-  <div>
-    <form @submit.prevent="handleSubmit">
-      <div>
-        <label for="">Title</label>
-        <input type="text" v-model="title" />
+  <header
+    class="masthead"
+    style="background-image: url('static/img/contact-bg.jpg')"
+  >
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="page-heading">
+            <h1>Create new Post</h1>
+          </div>
+        </div>
       </div>
-      <div>
-        <label for="">Body</label>
-        <textarea cols="30" rows="10" v-model="body"></textarea>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <form @submit.prevent="handleSubmit">
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label>Title</label>
+              <input
+                type="text"
+                name="name"
+                class="form-control"
+                placeholder="Title"
+                required
+                vmodel="title"
+              />
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label>Body</label>
+              <textarea
+                rows="5"
+                name="message"
+                class="form-control"
+                placeholder="input body"
+                required
+                v-model="body"
+              ></textarea>
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label>Tags</label>
+              <input
+                type="text"
+                name="name"
+                class="form-control"
+                placeholder="Input Tags"
+                id="name"
+                required
+                vmodel="tag"
+                @keydown.enter.prevent="handleKeydown"
+              />
+              <p class="help-block text-danger"></p>
+            </div>
+            <span
+              ><div v-for="tag in tags" :key="tag">#{{ tag }}</div></span
+            >
+          </div>
+          <br />
+          <button type="submit" class="btn btn-primary">Send</button>
+        </form>
       </div>
-      <div>
-        <label for="">Tags</label>
-        <input
-          type="text"
-          v-model="tags"
-          @keydown.enter.prevent="handleKeydown"
-        />
-      </div>
-      <button type="submit">Create post</button>
-    </form>
-    <div v-for="tag in tags" :key="tag"></div>
+    </div>
   </div>
 </template>
 
