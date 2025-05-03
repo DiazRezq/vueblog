@@ -1,5 +1,5 @@
-import firebase from "firebase/app";
-import "firebase/firestore";
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBPqHp9LyuluKJ_x5mveARUDJM9Sb8_tK0",
@@ -10,8 +10,11 @@ const firebaseConfig = {
   appId: "1:108066864353:web:ad15b621b4657049b64ba0",
 };
 
-firebase.initializeApp(firebaseConfig);
+// Inisialisasi Firebase (modular)
+const app = initializeApp(firebaseConfig);
 
-const projectFirestore = firebase.firestore();
+// Dapatkan instance Firestore (modular)
+const db = getFirestore(app);
 
-export { projectFirestore };
+// Export Firestore instance
+export { db };
