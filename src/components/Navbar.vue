@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-md navbar-light fixed-top" id="mainNav">
+  <nav class="navbar navbar-expand-md navbar-light fixed-top mt-2" id="mainNav">
     <div class="container">
       <a class="navbar-brand" href="/">naghiyev.com</a>
       <button

@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import ShowPost from "../views/posts/Show.vue";
 import CreatePost from "../views/posts/Create.vue";
+import Tag from "../views/posts/Tag.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -21,6 +22,11 @@ const router = createRouter({
       name: "ShowPost",
       component: ShowPost,
       props: true,
+    },
+    {
+      path: "/tag/:tag",
+      name: "Tag",
+      component: Tag,
     },
   ],
 });

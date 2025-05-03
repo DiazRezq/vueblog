@@ -7,7 +7,11 @@
       <p>{{ snippet }}</p>
     </h3>
   </router-link>
-  <span v-for="tag in post.tags" :key="tag" class="post-meta">#{{ tag }}</span>
+  <span v-for="tag in post.tags" :key="tag" class="post-meta">
+    <router-link :to="{ name: 'Tag', params: { tag: tag } }">
+      #{{ tag }}
+    </router-link>
+  </span>
 </template>
 
 <script>

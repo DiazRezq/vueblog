@@ -1,7 +1,11 @@
 <template>
   <header
     class="masthead"
-    style="background-image: url('static/img/contact-bg.jpg')"
+    style="
+      background-image: url('static/img/contact-bg.jpg');
+      padding-top: 100px;
+      padding-bottom: 50px;
+    "
   >
     <div class="overlay"></div>
     <div class="container">
@@ -14,7 +18,7 @@
       </div>
     </div>
   </header>
-
+ 
   <!-- Main Content -->
   <div class="container">
     <div class="row">
@@ -29,7 +33,7 @@
                 class="form-control"
                 placeholder="Title"
                 required
-                vmodel="title"
+                v-model="title"
               />
               <p class="help-block text-danger"></p>
             </div>
@@ -57,8 +61,7 @@
                 class="form-control"
                 placeholder="Input Tags"
                 id="name"
-                required
-                vmodel="tag"
+                v-model="tag"
                 @keydown.enter.prevent="handleKeydown"
               />
               <p class="help-block text-danger"></p>
@@ -118,4 +121,13 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.masthead {
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+.main-content {
+  margin-top: 30px;
+}
+</style>
