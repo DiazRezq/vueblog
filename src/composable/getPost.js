@@ -1,6 +1,7 @@
 import { ref } from "vue";
 import { db } from "@/firebase/config";
 import { doc, getDoc } from "firebase/firestore";
+import Tag from "@/views/posts/Tag.vue";  
 
 const getPost = (id) => {
   const post = ref(null);
@@ -24,6 +25,7 @@ const getPost = (id) => {
       post.value = {
         id: docSnap.id,
         ...docSnap.data(),
+        Tags: docSnap.data().Tags,
       };
     } catch (err) {
       error.value = err.message;

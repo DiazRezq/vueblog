@@ -1,4 +1,6 @@
 import { ref } from "vue";
+import { db } from "@/firebase/config";
+import { collection, getDocs } from "firebase/firestore";
 
 const getPosts = () => {
   const posts = ref([]);
@@ -6,16 +8,14 @@ const getPosts = () => {
 
   const load = async () => {
     try {
-      await new Promise((resolve) => {
-        setTimeout(resolve, 3000);
-      });
-      let data = await fetch("http://localhost:3000/posts");
-      if (!data.ok) {
-        throw Error("Tidak ada data");
-      }
-      posts.value = await data.json();
+      const res = await getDocs(collection(db, "posts"));
+      posts.value = res.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+        Tags: doc.data().Tags,
+      }));
     } catch (err) {
-      error.value = err.message;
+      error.value = "Firebase error: " + err.message;
     }
   };
 

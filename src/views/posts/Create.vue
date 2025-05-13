@@ -18,7 +18,7 @@
       </div>
     </div>
   </header>
- 
+
   <!-- Main Content -->
   <div class="container">
     <div class="row">
@@ -81,6 +81,8 @@
 <script>
 import { ref } from "@vue/reactivity";
 import { useRouter } from "vue-router";
+import { db } from "@/firebase/config";
+import { addDoc, collection } from "firebase/firestore";
 export default {
   setup() {
     const router = useRouter();
@@ -99,24 +101,31 @@ export default {
     };
 
     const handleSubmit = async () => {
-      const post = {
-        title: title.value,
-        body: body.value,
-        tags: tags.value,
-      };
+      try {
+        const newPost = {
+          title: title.value,
+          body: body.value,
+          tags: tags.value,
+          createdAt: new Date(),
+        };
 
-      await fetch("http://localhost:3000/posts/", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(post),
-      });
+        await addDoc(collection(db, "posts"), newPost);
 
-      router.push({
-        name: "home",
-      });
+        router.push({ name: "home" });
+      } catch (error) {
+        console.error("Gagal menambahkan post:", error);
+        alert("Terjadi kesalahan saat menyimpan post.");
+      }
     };
-
-    return { title, body, tags, tag, handleKeydown, handleSubmit };
+    
+    return {
+      title,
+      body,
+      tags,
+      tag,
+      handleKeydown,
+      handleSubmit,
+    };
   },
 };
 </script>

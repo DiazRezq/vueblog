@@ -24,9 +24,10 @@ const router = createRouter({
       props: true,
     },
     {
-      path: "/tag/:tag",
-      name: "Tag",
+      path: "/tags/:tag",
+      name: "Tags",
       component: Tag,
+      props: true,
     },
   ],
 });

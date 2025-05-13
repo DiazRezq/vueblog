@@ -7,8 +7,8 @@
       <p>{{ snippet }}</p>
     </h3>
   </router-link>
-  <span v-for="tag in post.tags" :key="tag" class="post-meta">
-    <router-link :to="{ name: 'Tag', params: { tag: tag } }">
+  <span v-for="tag in post.Tags" :key="tag" :name="tag" class="post-meta">
+    <router-link :to="{ name: 'Tags', params: { tag: tag } }">
       #{{ tag }}
     </router-link>
   </span>
